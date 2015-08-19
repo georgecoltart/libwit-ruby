@@ -51,9 +51,9 @@ if !File.file?(LIBWIT_PATH)
 end
 
 if RUBY_PLATFORM.include? 'darwin'
-	libs = ['wit', 'ssl', 'crypto', 'z', 'sox', 'System', 'pthread', 'c', 'm']
+	libs = ['wit', 'ssl', 'crypto', 'z',  'System', 'pthread', 'c', 'm']
 else
-	libs = ['wit', 'rt', 'sox', 'ssl', 'crypto', 'dl', 'pthread', 'rt', 'gcc_s', 'pthread', 'c', 'm']
+	libs = ['wit', 'rt',  'ssl', 'crypto', 'dl', 'pthread', 'rt', 'gcc_s', 'pthread', 'c', 'm']
 end
 
 $LOCAL_LIBS = '-l' + libs.join(' -l')
